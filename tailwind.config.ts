@@ -12,12 +12,15 @@ const config: Config = {
       colors: {
         primary: '#2b9e76',
         accent: '#ebfcf6',
+        porcelain: '#eceef0',
+        carbon: '#5c5c5c',
         'hadith-bg': '#f2f4f6',
         'hadith-bg-lite': '#fafbfb',
       },
     },
     screens: {
-      sm: '350px',
+      xs: '350px',
+      sm: '640px',
       md: '1024px',
       lg: '1280px',
       xl: '1536px',
