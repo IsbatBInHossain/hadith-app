@@ -1,5 +1,6 @@
 'use client'
 
+import { roboto } from '@/consts/fonts'
 import { ChangeEvent, useState } from 'react'
 import { IoSearchOutline } from 'react-icons/io5'
 
@@ -21,7 +22,7 @@ const Searchbar = () => {
           type='text'
           id='search_box'
           placeholder='Search Hadith'
-          className='max-md:hidden font-sans border-slate-200  border-2 p-3 rounded-lg focus:outline-0 focus:text-black pl-10 pr-10'
+          className={`max-md:hidden ${roboto.className} border-slate-200  border-2 p-3 rounded-lg focus:outline-0 focus:text-black pl-10 pr-10`}
           onChange={e => handleChange(e)}
           value={searchItem}
         ></input>

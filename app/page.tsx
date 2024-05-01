@@ -1,4 +1,4 @@
-import MainBody from '@/components/MainBody'
+import MainBody from '@/components/Body/MainBody'
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
 import React from 'react'

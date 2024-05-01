@@ -1,0 +1,204 @@
+{
+  "book": [
+    {
+      "id": 1,
+      "title": "সহিহ বুখারী",
+      "title_ar": "صحيح البخاري",
+      "number_of_hadis": 7563,
+      "abvr_code": "B",
+      "book_name": "bukhari"
+    },
+    {
+      "id": 2,
+      "title": "সহিহ মুসলিম",
+      "title_ar": "صحيح مسلم",
+      "number_of_hadis": 7453,
+      "abvr_code": "M",
+      "book_name": "muslim"
+    },
+    {
+      "id": 3,
+      "title": "সুনানে আন-নাসায়ী",
+      "title_ar": "سنن النسائي",
+      "number_of_hadis": 5758,
+      "abvr_code": "N",
+      "book_name": "nasai"
+    },
+    {
+      "id": 4,
+      "title": "সুনানে আবু দাউদ",
+      "title_ar": "سنن أبي داود",
+      "number_of_hadis": 5274,
+      "abvr_code": "AD",
+      "book_name": "abu-dawud"
+    },
+    {
+      "id": 5,
+      "title": "জামে' আত-তিরমিজি",
+      "title_ar": "جامع الترمذي",
+      "number_of_hadis": 3956,
+      "abvr_code": "T",
+      "book_name": "tirmidhi"
+    },
+    {
+      "id": 6,
+      "title": "সুনানে ইবনে মাজাহ",
+      "title_ar": "سنن ابن ماجه",
+      "number_of_hadis": 4341,
+      "abvr_code": "IM",
+      "book_name": "ibn-majah"
+    },
+    {
+      "id": 7,
+      "title": "মুয়াত্তা ইমাম মালিক",
+      "title_ar": "موطأ مالك",
+      "number_of_hadis": 1832,
+      "abvr_code": "MI",
+      "book_name": "muwatta-malik"
+    },
+    {
+      "id": 8,
+      "title": "রিয়াদুস সলেহিন",
+      "title_ar": "رياض الصالحين",
+      "number_of_hadis": 1905,
+      "abvr_code": "RS",
+      "book_name": "riyadus-salihin"
+    },
+    {
+      "id": 9,
+      "title": "বুলুগুল মারাম",
+      "title_ar": "بلوغ المرام",
+      "number_of_hadis": 1568,
+      "abvr_code": "BM",
+      "book_name": "bulugul-maram"
+    },
+    {
+      "id": 11,
+      "title": "আল লু'লু ওয়াল মারজান",
+      "title_ar": "اللؤلؤ و المرجان",
+      "number_of_hadis": 1906,
+      "abvr_code": "LM",
+      "book_name": "luluwal-marjan"
+    },
+    {
+      "id": 12,
+      "title": "হাদিস সম্ভার",
+      "title_ar": "جمع الحديث",
+      "number_of_hadis": 2013,
+      "abvr_code": "HS",
+      "book_name": "hadis-somvar"
+    },
+    {
+      "id": 13,
+      "title": "সিলসিলা সহিহা",
+      "title_ar": "سلسلة صحيحة",
+      "number_of_hadis": 60,
+      "abvr_code": "SS",
+      "book_name": "silsila-sahiha"
+    },
+    {
+      "id": 14,
+      "title": "জাল জয়িফ হাদিস সিরিজ",
+      "title_ar": "سلسلة الحديث الشريف المزيف",
+      "number_of_hadis": 102,
+      "abvr_code": "JH",
+      "book_name": "dhaif-hadis-sirij"
+    },
+    {
+      "id": 15,
+      "title": "মিশকাতুল মাসাবিহ",
+      "title_ar": "مشكاة المصابيح",
+      "number_of_hadis": 2758,
+      "abvr_code": "MM",
+      "book_name": "mishkatul-masabih"
+    },
+    {
+      "id": 16,
+      "title": "৪০ হাদিস",
+      "title_ar": "الأربعينات",
+      "number_of_hadis": 42,
+      "abvr_code": "40",
+      "book_name": "40-hadith"
+    },
+    {
+      "id": 17,
+      "title": "আদাবুল মুফরাদ",
+      "title_ar": "الأدب المفرد",
+      "number_of_hadis": 1336,
+      "abvr_code": "AM",
+      "book_name": "adabul-mufrad"
+    },
+    {
+      "id": 18,
+      "title": "জুজ'উল রাফায়েল ইয়াদাইন",
+      "title_ar": "جزء رفائيل يدين",
+      "number_of_hadis": 56,
+      "abvr_code": "JR",
+      "book_name": "jujul-rafayel-yadain"
+    },
+    {
+      "id": 20,
+      "title": "সহিহ হাদিসে কুদসি",
+      "title_ar": "صحيح حديث قدسي",
+      "number_of_hadis": 163,
+      "abvr_code": "HK",
+      "book_name": "sahih-hadise-qudsi"
+    },
+    {
+      "id": 21,
+      "title": "১০০ সুসাব্যস্ত হাদিস",
+      "title_ar": "مائة حديث حسن",
+      "number_of_hadis": 101,
+      "abvr_code": "100",
+      "book_name": "100-hadith"
+    },
+    {
+      "id": 22,
+      "title": "মিশকাতে জয়িফ হাদিস",
+      "title_ar": "جويف الحديث في مشكا",
+      "number_of_hadis": 106,
+      "abvr_code": "MJ",
+      "book_name": "miskate-dhaif-hadis"
+    },
+    {
+      "id": 23,
+      "title": "শামায়েলে তিরমিযি",
+      "title_ar": "شمايل الترمذي",
+      "number_of_hadis": 320,
+      "abvr_code": "ST",
+      "book_name": "shamayele-tirmidhi"
+    },
+    {
+      "id": 26,
+      "title": "সহিহ তারগিব ওয়াত তাহরিব",
+      "title_ar": "صحيح ترغيب وطهريب",
+      "number_of_hadis": 200,
+      "abvr_code": "TW",
+      "book_name": "targib-wattahrib"
+    },
+    {
+      "id": 27,
+      "title": "সহিহ ফাযায়েলে আমল",
+      "title_ar": "صحيح فضايل امل",
+      "number_of_hadis": 151,
+      "abvr_code": "FA",
+      "book_name": "fazayele-amal"
+    },
+    {
+      "id": 28,
+      "title": "ঊপদেশ",
+      "title_ar": "النصيحة",
+      "number_of_hadis": 234,
+      "abvr_code": "UP",
+      "book_name": "upodesh"
+    },
+    {
+      "id": 29,
+      "title": "রমজানের দুর্বল হাদিস",
+      "title_ar": "حديث ضعيف في رمضان",
+      "number_of_hadis": 36,
+      "abvr_code": "RH",
+      "book_name": "ramadaner-durbol-hadis"
+    }
+  ]
+}
