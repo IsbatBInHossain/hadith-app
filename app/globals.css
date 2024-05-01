@@ -20,4 +20,7 @@
   .calc-height {
     height: calc(100vh - 80px);
   }
+  .calc-height-body {
+    height: calc(100vh - 144px);
+  }
 }

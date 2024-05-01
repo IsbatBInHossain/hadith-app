@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='bn'>
-      <body className='font-kalpurush bg-hadith-bg'>{children}</body>
+      <body className='font-kalpurush bg-white'>{children}</body>
     </html>
   )
 }

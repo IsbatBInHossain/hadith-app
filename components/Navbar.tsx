@@ -5,7 +5,7 @@ import Searchbar from './Searchbar'
 
 const Navbar = () => {
   return (
-    <nav className='fixed z-10 top-0 left-0 right-0 flex items-center justify-between w-full max-md:h-16 h-20 px-4 bg-white border-b'>
+    <nav className='fixed z-10 top-0 left-0 right-0 flex items-center justify-between w-full max-md:h-16 h-20 px-4 bg-white'>
       <div className=' flex items-center cursor-pointer'>
         <div className='w-11 md:w-fit'>
           <Image
