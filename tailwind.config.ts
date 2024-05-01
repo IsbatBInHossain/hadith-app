@@ -17,6 +17,10 @@ const config: Config = {
         'hadith-bg': '#f2f4f6',
         'hadith-bg-lite': '#fafbfb',
       },
+      fontFamily: {
+        kalpurush: ['Kalpurush', ...defaultTheme.fontFamily.sans],
+        KFGQPC: ['KFGQOC Uthmanic Script', ...defaultTheme.fontFamily.sans],
+      },
     },
     screens: {
       xs: '350px',
@@ -24,10 +28,6 @@ const config: Config = {
       md: '1024px',
       lg: '1280px',
       xl: '1536px',
-    },
-    fontFamily: {
-      kalpurush: ['Kalpurush', ...defaultTheme.fontFamily.sans],
-      KFGQPC: ['KFGQOC Uthmanic Script', ...defaultTheme.fontFamily.sans],
     },
   },
 

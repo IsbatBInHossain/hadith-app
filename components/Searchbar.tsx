@@ -12,7 +12,7 @@ const Searchbar = () => {
   }
 
   return (
-    <form className=' w-fit'>
+    <form className=' w-fit '>
       <div className='relative md-max:w-10 md-max:h-10 flex items-center justify-center rounded-lg max-md:bg-porcelain max-md:w-10 max-md:h-10'>
         <div className=' relative'>
           <IoSearchOutline className=' text-carbon w-[18px] h-[18px] absolute -top-[10px] left-4 max-md:-left-[9px] max-md:-top-[8px]' />
@@ -21,7 +21,7 @@ const Searchbar = () => {
           type='text'
           id='search_box'
           placeholder='Search Hadith'
-          className='max-md:hidden border-slate-200  border-2 p-3 rounded-lg focus:outline-0 focus:text-black pl-10 pr-10 placeholder:tracking-wider'
+          className='max-md:hidden font-sans border-slate-200  border-2 p-3 rounded-lg focus:outline-0 focus:text-black pl-10 pr-10'
           onChange={e => handleChange(e)}
           value={searchItem}
         ></input>

@@ -17,4 +17,7 @@
     font-display: swap;
     src: url(/fonts/KFGQPC\ Uthmanic\ Script\ HAFS\ Regular.otf) format('otf');
   }
+  .calc-height {
+    height: calc(100vh - 80px);
+  }
 }
