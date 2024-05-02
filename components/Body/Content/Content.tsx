@@ -1,45 +1,22 @@
-import Image from 'next/image'
-import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
-import allBooks from '@/public/data/all-books.json'
+import chapterHadith from '@/public/data/bukhari-1.json'
+import ContentHeader from './ContentHeader'
+import ChapterCard from './ChapterCard'
 
 const Content = () => {
-  const books = allBooks.book
+  const chapters = chapterHadith.hadith
 
   return (
-    <div className=' h-full w-full mx-6 flex items-center flex-col mt-8'>
-      <div className='w-full '>
-        <div className=' rounded-t-2xl font-sans text-sm text-[#667085] bg-hadith-bg-lite mb-0.5 p-4 flex items-center'>
-          <Image
-            src='/assets/others/breadcrumb_book.svg'
-            alt='book image'
-            width={17}
-            height={17}
-          />
-          <MdOutlineKeyboardArrowRight className=' w-5 h-5' />
-          <p>Bukhari</p>
-          <MdOutlineKeyboardArrowRight className=' w-5 h-5' />
-          <p>1</p>
-        </div>
-        <div className=' bg-white flex justify-between items-center py-6 px-6 rounded-b-2xl'>
-          <div className=' flex gap-4'>
-            <Image
-              src='/assets/others/hadith.svg'
-              alt='hadith image'
-              width={40}
-              height={40}
-            />
-            <div className=' flex flex-col'>
-              <h3 className=' mb-2 text-2xl'>সহিহ বুখারী</h3>
-              <p className=' text-sm'>
-                সর্বমোট হাদিস - <span>৭৫৬৩</span>
-              </p>
-            </div>
-          </div>
-          <div className=' font-KFGQPC text-2xl tracking-wide'>
-            صحيح البخاري
-          </div>
-        </div>
+    <div className=' h-full w-full mx-6 flex items-center flex-col mt-8 overflow-y-auto'>
+      <ContentHeader />
+      <div className=' rounded-2xl bg-white p-4 flex items-center gap-4 w-full mt-4'>
+        <h4 className=' flex items-center justify-center text-white w-[42.34px] h-10 rounded-xl bg-primary font-medium leading-6'>
+          ১
+        </h4>
+        <p className=' text-xl leading-7 text-slate-600'>ওহীর সূচনা অধ্যায়</p>
       </div>
+      {chapters.map(chapter => (
+        <ChapterCard key={chapter.chapter_id} chapter={chapter} />
+      ))}
     </div>
   )
 }

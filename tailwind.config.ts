@@ -19,7 +19,7 @@ const config: Config = {
       },
       fontFamily: {
         kalpurush: ['Kalpurush', ...defaultTheme.fontFamily.sans],
-        KFGQPC: ['KFGQOC Uthmanic Script', ...defaultTheme.fontFamily.sans],
+        KFGQPC: ['KFGQPC', ...defaultTheme.fontFamily.sans],
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
       },
     },

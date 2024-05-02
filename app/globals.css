@@ -13,11 +13,11 @@
     src: url(/fonts/kalpurush.ttf) format('ttf');
   }
   @font-face {
-    font-family: 'KFGQOC Uthmanic Script';
+    font-family: 'KFGQPC Uthmanic Script';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/fonts/KFGQPC\ Uthmanic\ Script\ HAFS\ Regular.otf) format('otf');
+    src: url(/fonts/KFGQPC.otf) format('otf');
   }
   .calc-height {
     height: calc(100vh - 80px);
