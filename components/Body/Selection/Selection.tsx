@@ -10,7 +10,7 @@ const Selection = () => {
   }
 
   return (
-    <div className=' max-lg:hidden rounded-2xl h-[calc(100vh_-_115px)] bg-white w-[350px] flex items-center flex-col'>
+    <div className=' max-lg:hidden rounded-2xl h-[calc(100vh_-_115px)] bg-white min-w-[350px] w-[350px] flex items-center flex-col'>
       <div className='border-b-[1px] w-full flex items-center justify-center text-lg text-white border-porcelain '>
         <p
           onClick={e => handleClick(e)}
