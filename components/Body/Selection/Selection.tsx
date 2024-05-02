@@ -36,7 +36,7 @@ const Selection = () => {
         </p>
       </div>
       <SelectionSearchbar />
-      <Books />
+      <Books selector={selector} />
     </div>
   )
 }

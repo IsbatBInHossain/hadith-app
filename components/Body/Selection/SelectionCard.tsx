@@ -1,23 +1,24 @@
 import React from 'react'
 
-interface HadithBook {
-  id: number
+interface Props {
   title: string
-  title_ar: string
-  number_of_hadis: number
-  abvr_code: string
-  book_name: string
+  code: string
+  number: string
+  selector: string
 }
 
-const SelectionCard = (book: HadithBook) => {
-  const formattedNumber = book.number_of_hadis.toLocaleString('bn-BD')
+const SelectionCard = ({ title, code, number, selector }: Props) => {
+  let formattedNumber
+  if (selector === 'books') {
+    formattedNumber = parseInt(number).toLocaleString('bn-BD')
+  }
 
   return (
     <div className=' p-4 flex  group cursor-pointer  false bg-white group hover:bg-accent justify-between items-center rounded-2xl h-[6.25rem]'>
       <div className=' flex items-center gap-4'>
         <div className='h-12 w-12 max-xl:w-10 max-xl:h-10  flex items-center justify-center relative'>
           <h3 className='text-gray-400 group-hover:text-white absolute font-medium font-sans group-hover:opacity-100'>
-            {book.abvr_code}
+            {code}
           </h3>
           <svg
             className='fill-[#f1f5f4] group-hover:fill-primary false    '
@@ -35,10 +36,11 @@ const SelectionCard = (book: HadithBook) => {
         </div>
         <div className='flex flex-col justify-between gap-1.5 group'>
           <h4 className='text-base font-medium leading-7 text-[15px] text-black md:text-base xl:text-base'>
-            {book.title}
+            {title}
           </h4>
           <p className='text-[#40404099] text-sm leading-[26px] md:text-[13px]'>
-            সর্বমোট হাদিস - <span>{formattedNumber}</span>
+            {selector === 'books' ? 'সর্বমোট হাদিস - ' : 'হাদিসের রেঞ্জ: '}
+            <span>{selector === 'books' ? formattedNumber : number}</span>
           </p>
         </div>
       </div>
