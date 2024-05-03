@@ -9,7 +9,6 @@ import { toggleTheme } from '@/lib/utils'
 const Setting = () => {
   const [translateFontRange, setTranslateFontRange] = useState('17')
   const [arabicFontRange, setArabicFontRange] = useState('23')
-  const [isOpen, setIsOpen] = useState(false)
   const theme = useContext(ThemeContext)
 
   const handleTranslateFontChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -19,15 +18,9 @@ const Setting = () => {
     setArabicFontRange(e.target.value)
   }
 
-  useEffect(() => {
-    const dropDown = document.getElementById('fontDropDown')
-    if (dropDown) {
-      dropDown.classList.toggle('hidden', !isOpen)
-    }
-  }, [isOpen])
-
   const toggleDropDown = () => {
-    setIsOpen(!isOpen)
+    const dropdown = document.getElementById('fontDropdown')
+    dropdown?.classList.toggle('hidden')
   }
 
   const handleThemeChange = () => {
@@ -66,19 +59,19 @@ const Setting = () => {
                 className='absolute hidden font-sans bg-white dark:bg-hadith-bg-lite-dark rounded-lg right-0 left-0 top-14 px-0 pt-3 shadow-2xl z-10'
               >
                 <div className='cursor-pointer text-[15px] flex flex-col px-2 pb-2'>
-                  <div className='hover:bg-[#f8f8f9] px-4 py-2 rounded-md'>
+                  <div className='hover:bg-[#f8f8f9] dark:hover:bg-dark-gray px-4 py-2 rounded-md'>
                     KFGQ
                   </div>
-                  <div className='hover:bg-[#f8f8f9] px-4 py-2 rounded-md'>
+                  <div className='hover:bg-[#f8f8f9] dark:hover:bg-dark-gray px-4 py-2 rounded-md'>
                     Me Quran
                   </div>
-                  <div className='hover:bg-[#f8f8f9] px-4 py-2 rounded-md'>
+                  <div className='hover:bg-[#f8f8f9] dark:hover:bg-dark-gray px-4 py-2 rounded-md'>
                     Al Mushaf
                   </div>
-                  <div className='hover:bg-[#f8f8f9] px-4 py-2 rounded-md'>
+                  <div className='hover:bg-[#f8f8f9] dark:hover:bg-dark-gray px-4 py-2 rounded-md'>
                     Amiri
                   </div>
-                  <div className='hover:bg-[#f8f8f9] px-4 py-2 rounded-md'>
+                  <div className='hover:bg-[#f8f8f9] dark:hover:bg-dark-gray px-4 py-2 rounded-md'>
                     Arial
                   </div>
                 </div>
