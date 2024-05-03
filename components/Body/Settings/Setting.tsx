@@ -53,6 +53,7 @@ const Setting = () => {
             ? 'fixed top-0 left-0 w-full h-screen bg-black dark:opacity-70 opacity-20'
             : ' hidden'
         }`}
+        onClick={handleSettingToggle}
       />
       <div
         id='setting'
