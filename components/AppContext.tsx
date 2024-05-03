@@ -8,6 +8,8 @@ import { useState } from 'react'
 export const initialState: StateType = {
   book: 'সহিহ বুখারী',
   chapter: 'ওহীর সূচনা অধ্যায়',
+  arabicFontSize: 23,
+  translationFontSize: 17,
 }
 
 const AppContext = ({ children }: { children: React.ReactNode }) => {

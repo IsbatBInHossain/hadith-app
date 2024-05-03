@@ -11,12 +11,10 @@ const Navbar = () => {
   const settingContext = useContext(SettingContext)
 
   const toggleSetting = () => {
-    const setting = document.getElementById('setting')
-    setting?.classList.toggle('max-xl:hidden')
     settingContext?.setSettingOpen(!settingContext.settingOpen)
   }
   return (
-    <nav className='fixed z-10 top-0 left-0 right-0 flex items-center justify-between w-full max-md:h-16 h-20 px-4 bg-white dark:bg-dark-gray'>
+    <nav className='fixed top-0 left-0 right-0 flex items-center justify-between w-full max-md:h-16 h-20 px-4 bg-white dark:bg-dark-gray'>
       <div className=' flex items-center cursor-pointer'>
         <div className='w-11 md:w-fit'>
           <Image
@@ -48,7 +46,7 @@ const Navbar = () => {
           <RiHandHeartFill className=' w-6 h-6' />
         </div>
         <div
-          className=' w-10 h-10 bg-primary items-center justify-center rounded-lg  flex xl:hidden '
+          className=' w-10 h-10 bg-primary items-center justify-center rounded-lg cursor-pointer flex xl:hidden '
           onClick={toggleSetting}
         >
           <IoIosSettings className=' w-6 h-6 text-white' />

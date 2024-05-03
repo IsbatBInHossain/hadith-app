@@ -1,11 +1,15 @@
-import { HadithProps } from '@/types'
 import Image from 'next/image'
+import { HadithProps } from '@/types'
 import { IoCopyOutline } from 'react-icons/io5'
 import { MdOutlineBookmarkBorder } from 'react-icons/md'
 import { CiShare2, CiShare1 } from 'react-icons/ci'
 import { PiWarningOctagonLight } from 'react-icons/pi'
+import { useContext } from 'react'
+import { StateContext } from '@/context'
 
 const HadithCard = ({ hadith }: { hadith: HadithProps }) => {
+  const state = useContext(StateContext)
+
   return (
     <div className='rounded-2xl bg-white dark:bg-dark-gray p-4 flex flex-col gap-4 w-full mt-4'>
       <div className=' flex gap-3 items-center'>
@@ -21,14 +25,22 @@ const HadithCard = ({ hadith }: { hadith: HadithProps }) => {
       </div>
       <div
         className=' font-KFGQPC text-xl px-4 leading-[46px]'
-        style={{ wordSpacing: '5px' }}
+        style={{ wordSpacing: '5px', fontSize: state?.state.arabicFontSize }}
       >
         {hadith.ar}
       </div>
-      <div className=' text-primary text-[17px] mt-8'>
+      <div
+        className=' text-primary mt-8'
+        style={{ fontSize: state?.state.translationFontSize }}
+      >
         {hadith.narrator} থেকে বর্ণিত:
       </div>
-      <p className=' text-[17px] leading-8'>{hadith.bn}</p>
+      <p
+        className='  leading-8'
+        style={{ fontSize: state?.state.translationFontSize }}
+      >
+        {hadith.bn}
+      </p>
       <div className=' flex justify-between items-center mt-8'>
         <div className=' flex gap-2 items-center'>
           <p>হাদিসের মান :</p>

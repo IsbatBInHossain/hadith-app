@@ -42,6 +42,8 @@ export interface BookType {
 export type StateType = {
   book: string
   chapter: string
+  arabicFontSize: number
+  translationFontSize: number
 }
 
 export type ThemeType = 'light' | 'dark' | 'system'
