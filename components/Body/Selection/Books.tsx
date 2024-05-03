@@ -1,4 +1,3 @@
-'use client'
 import allBooks from '@/public/data/all-books.json'
 import bukhari from '@/public/data/bukhari.json'
 import SelectionCard from './SelectionCard'

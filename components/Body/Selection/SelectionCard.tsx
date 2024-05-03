@@ -1,4 +1,7 @@
-import React from 'react'
+'use client'
+
+import { StateContext } from '@/context'
+import { useContext } from 'react'
 
 interface Props {
   title: string
@@ -12,16 +15,42 @@ const SelectionCard = ({ title, code, number, selector }: Props) => {
   if (selector === 'books') {
     formattedNumber = parseInt(number).toLocaleString('bn-BD')
   }
+  const state = useContext(StateContext)
+  const isSpecial =
+    state?.state.book === title || state?.state.chapter === title
+
+  const handleClick = () => {
+    if (selector === 'books') {
+      state?.setState({ ...state.state, book: title })
+    } else {
+      state?.setState({ ...state.state, chapter: title })
+    }
+  }
 
   return (
-    <div className=' p-4 flex  group cursor-pointer  false bg-white dark:bg-dark-gray group dark:hover:bg-hadith-bg-lite-dark hover:bg-accent justify-between items-center rounded-2xl h-[6.25rem]'>
+    <div
+      className={`p-4 flex  group cursor-pointer justify-between items-center rounded-2xl h-[6.25rem] ${
+        isSpecial
+          ? ' dark:bg-hadith-bg-lite-dark bg-accent'
+          : 'bg-white dark:bg-dark-gray group dark:hover:bg-hadith-bg-lite-dark hover:bg-accent'
+      }`}
+      onClick={handleClick}
+    >
       <div className=' flex items-center gap-4'>
         <div className='h-12 w-12 max-xl:w-10 max-xl:h-10  flex items-center justify-center relative'>
-          <h3 className='text-gray-400 group-hover:text-white absolute font-medium font-sans group-hover:opacity-100'>
+          <h3
+            className={`${
+              isSpecial ? 'text-white' : 'text-gray-400 group-hover:text-white'
+            } absolute font-medium group-hover:opacity-100`}
+          >
             {code}
           </h3>
           <svg
-            className='fill-[#f1f5f4] dark:fill-hadith-bg-lite-dark group-hover:fill-primary false    '
+            className={` ${
+              isSpecial
+                ? 'fill-primary'
+                : 'fill-[#f1f5f4] dark:fill-hadith-bg-lite-dark group-hover:fill-primary'
+            }`}
             width='56'
             height='62'
             viewBox='0 0 56 62'

@@ -41,7 +41,7 @@ export interface BookType {
 
 export type StateType = {
   book: string
-  chapter: number
+  chapter: string
 }
 
 export type ThemeType = 'light' | 'dark' | 'system'

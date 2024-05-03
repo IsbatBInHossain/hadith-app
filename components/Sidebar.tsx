@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { iconType, sideBarIcons } from '@/consts'
 import { useState } from 'react'
+import { ImBooks } from 'react-icons/im'
 
 const Sidebar = () => {
   const [isHovered, setIsHovered] = useState<iconType | null>(null)
@@ -12,18 +13,21 @@ const Sidebar = () => {
           <li
             key={icon.name}
             className={`p-4 rounded-lg hover:bg-hadith-bg-lite dark:hover:bg-hadith-bg-lite-dark cursor-pointer ${
-              icon.name == 'Others' ? 'max-md:hidden' : ''
-            }`}
+              icon.name === 'Others' ? 'max-md:hidden' : ''
+            } ${icon.name === 'Books' ? 'bg-primary' : ''}`}
             onMouseEnter={() => setIsHovered(icon)}
             onMouseLeave={() => setIsHovered(null)}
           >
-            <Image
-              src={isHovered?.name == icon.name ? icon.hoverSrc : icon.src}
-              alt={`${icon.name} logo`}
-              width={24}
-              height={24}
-              className=' fill-carbon dark:fill-carbon-dark'
-            />
+            {icon.name === 'Books' ? (
+              <ImBooks className=' w-6 h-6 text-white' />
+            ) : (
+              <Image
+                src={isHovered?.name == icon.name ? icon.hoverSrc : icon.src}
+                alt={`${icon.name} logo`}
+                width={24}
+                height={24}
+              />
+            )}
           </li>
         ))}
       </ul>

@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction, createContext } from 'react'
 
 interface ThemeContextType {
   theme: ThemeType
-  setTheme: Dispatch<SetStateAction<string>>
+  setTheme: Dispatch<SetStateAction<ThemeType>>
 }
 
 export const ThemeContext = createContext<ThemeContextType | null>(null)

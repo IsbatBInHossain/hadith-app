@@ -1,10 +1,11 @@
 'use client'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import SelectionSearchbar from './SelectionSearchbar'
 import Books from './Books'
 
 const Selection = () => {
   const [selector, setSelector] = useState('chapters')
+
   const handleClick = (e: React.MouseEvent<HTMLParagraphElement>) => {
     setSelector((e.target as HTMLParagraphElement).id)
   }

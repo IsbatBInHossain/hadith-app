@@ -1,17 +1,17 @@
 'use client'
 
 import { StateContext, ThemeContext } from '@/context'
-import { StateType } from '@/types'
+import { StateType, ThemeType } from '@/types'
 import { useState } from 'react'
 
 export const initialState: StateType = {
-  book: 'bukhari',
-  chapter: 1,
+  book: 'সহিহ বুখারী',
+  chapter: 'ওহীর সূচনা অধ্যায়',
 }
 
 const AppContext = ({ children }: { children: React.ReactNode }) => {
   const [state, setState] = useState(initialState)
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState<ThemeType>('light')
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
