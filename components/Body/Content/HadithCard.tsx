@@ -7,7 +7,7 @@ import { PiWarningOctagonLight } from 'react-icons/pi'
 
 const HadithCard = ({ hadith }: { hadith: HadithProps }) => {
   return (
-    <div className='rounded-2xl bg-white p-4 flex flex-col gap-4 w-full mt-4'>
+    <div className='rounded-2xl bg-white dark:bg-dark-gray p-4 flex flex-col gap-4 w-full mt-4'>
       <div className=' flex gap-3 items-center'>
         <Image
           src='/assets/others/pattern.svg'

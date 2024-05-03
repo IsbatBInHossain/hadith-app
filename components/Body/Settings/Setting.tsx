@@ -1,7 +1,7 @@
 'use client'
 
 import { ChangeEvent, useContext, useEffect, useState } from 'react'
-import { BiDownArrow } from 'react-icons/bi'
+import { FaAngleDown } from 'react-icons/fa6'
 import SupportUs from './SupportUs'
 import { ThemeContext } from '@/context'
 import { toggleTheme } from '@/lib/utils'
@@ -41,32 +41,29 @@ const Setting = () => {
   }
 
   return (
-    <div
-      className=' rounded-2xl max-xl:pb-36 max-xl:hidden h-[calc(100vh_-_115px)] overflow-y-auto bg-white dark:bg-dark-gray min-w-[350px] w-[350px] flex flex-col'
-      style={{ scrollbarWidth: 'thin' }}
-    >
-      <div className=' p-5 rounded-xl max-xl:p-0'>
+    <div className=' rounded-2xl max-xl:pb-36 max-xl:hidden h-[calc(100vh_-_115px)] overflow-y-auto  min-w-[350px] w-[350px] flex flex-col scrollbar custom-scrollbar dark:text-carbon-dark'>
+      <div className=' p-5 rounded-xl max-xl:p-0 bg-white dark:bg-dark-gray'>
         <div className='font-medium text-center text-2xl '>সেটিংস</div>
         <div className='xl-max:mt-6'>
           <div className=''>
             <div className=' mt-4 mb-2 text-md'>আরবি ফন্ট সিলেক্ট করুন</div>
             <div className='relative'>
               <div
-                className='w-full h-12 border border-solid border-[#ECEEF0] rounded-lg'
+                className='w-full h-12  font-sans border border-solid border-[#ECEEF0] dark:border-none dark:bg-hadith-bg-lite-dark rounded-lg'
                 onClick={toggleDropDown}
               >
                 <div className='px-4 py-3 flex items-center justify-between cursor-pointer'>
-                  <div className=' text-sm text-black '>
+                  <div className=' text-sm text-black dark:text-carbon-dark'>
                     <div>
                       <p>KFGQ</p>
                     </div>
                   </div>
-                  <BiDownArrow className=' block' />
+                  <FaAngleDown className=' block' />
                 </div>
               </div>
               <div
                 id='fontDropdown'
-                className='absolute hidden bg-white rounded-lg right-0 left-0 top-14 px-0 pt-3 shadow-2xl z-10'
+                className='absolute hidden font-sans bg-white dark:bg-hadith-bg-lite-dark rounded-lg right-0 left-0 top-14 px-0 pt-3 shadow-2xl z-10'
               >
                 <div className='cursor-pointer text-[15px] flex flex-col px-2 pb-2'>
                   <div className='hover:bg-[#f8f8f9] px-4 py-2 rounded-md'>
@@ -102,7 +99,7 @@ const Setting = () => {
                 min='18'
                 max='40'
                 value={arabicFontRange}
-                style={{ backgroundSize: '22.7273% 100%' }}
+                className=' bg-red'
                 onChange={e => handleArabicFontChange(e)}
                 name='translation'
               />
@@ -135,13 +132,13 @@ const Setting = () => {
                 <div className='text-md'>নাইট মোড</div>
                 <div>
                   <button
-                    className='bg-[#ECEEF0] relative inline-flex h-5 w-10 items-center rounded-full'
+                    className='bg-[#ECEEF0] dark:bg-[#234036] relative inline-flex h-5 w-10 items-center rounded-full'
                     type='button'
                     onClick={handleThemeChange}
                   >
                     <span
                       aria-hidden='true'
-                      className='translate-x-[3px] dark:translate-x-[21px] bg-white
+                      className='translate-x-[3px] dark:translate-x-[21px] bg-white dark:bg-[#2b9e76]
             pointer-events-none inline-block h-[16px] w-[16px] transform rounded-full  shadow-lg ring-0 transition duration-200 ease-in-out'
                     ></span>
                   </button>

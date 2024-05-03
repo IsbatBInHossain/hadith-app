@@ -17,7 +17,7 @@ const Selection = () => {
           className={`${
             selector == 'books'
               ? 'bg-primary text-white'
-              : 'bg-white dark:bg-dark-gray text-black'
+              : 'bg-white dark:bg-dark-gray text-black dark:text-carbon-dark'
           } w-1/2 text-center py-3 cursor-pointer rounded-tl-2xl text-xl`}
           id='books'
         >
@@ -28,7 +28,7 @@ const Selection = () => {
           className={`${
             selector == 'chapters'
               ? 'bg-primary text-white'
-              : 'bg-white dark:bg-dark-gray text-black'
+              : 'bg-white dark:bg-dark-gray text-black dark:text-carbon-dark'
           } text-xl w-1/2 text-center  py-3 cursor-pointer rounded-tr-xl`}
           id='chapters'
         >

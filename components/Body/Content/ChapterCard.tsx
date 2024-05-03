@@ -5,7 +5,7 @@ import HadithCard from './HadithCard'
 const ChapterCard = ({ chapter }: { chapter: ChapterProps }) => {
   return (
     <>
-      <div className=' rounded-2xl bg-white p-4 flex items-center w-full mt-4'>
+      <div className=' rounded-2xl bg-white dark:bg-dark-gray p-4 flex items-center w-full mt-4'>
         <div className=' flex flex-col gap-4'>
           <div className=' flex items-center gap-2'>
             <Image
@@ -19,8 +19,10 @@ const ChapterCard = ({ chapter }: { chapter: ChapterProps }) => {
           <div>{chapter.title}</div>
           {chapter.preface ? (
             <>
-              <div className=' w-full border border-slate-200' />
-              <div className=' text-slate-600'>{chapter.preface}</div>
+              <div className=' w-full border-b border-slate-200 dark:border-accent-dark' />
+              <div className=' text-slate-600 dark:text-carbon-dark'>
+                {chapter.preface}
+              </div>
             </>
           ) : null}
         </div>
