@@ -1,9 +1,20 @@
+'use client'
+
 import Image from 'next/image'
 import { RiHandHeartFill } from 'react-icons/ri'
 import { IoIosSettings } from 'react-icons/io'
 import Searchbar from './Searchbar'
+import { useContext } from 'react'
+import { SettingContext } from '@/context/SettingContext'
 
 const Navbar = () => {
+  const settingContext = useContext(SettingContext)
+
+  const toggleSetting = () => {
+    const setting = document.getElementById('setting')
+    setting?.classList.toggle('max-xl:hidden')
+    settingContext?.setSettingOpen(!settingContext.settingOpen)
+  }
   return (
     <nav className='fixed z-10 top-0 left-0 right-0 flex items-center justify-between w-full max-md:h-16 h-20 px-4 bg-white dark:bg-dark-gray'>
       <div className=' flex items-center cursor-pointer'>
@@ -36,7 +47,10 @@ const Navbar = () => {
           <p>সাপোর্ট করুন</p>
           <RiHandHeartFill className=' w-6 h-6' />
         </div>
-        <div className=' w-10 h-10 bg-primary items-center justify-center rounded-lg  flex xl:hidden '>
+        <div
+          className=' w-10 h-10 bg-primary items-center justify-center rounded-lg  flex xl:hidden '
+          onClick={toggleSetting}
+        >
           <IoIosSettings className=' w-6 h-6 text-white' />
         </div>
       </div>

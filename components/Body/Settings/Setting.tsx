@@ -34,8 +34,11 @@ const Setting = () => {
   }
 
   return (
-    <div className=' rounded-2xl max-xl:pb-36 max-xl:hidden h-[calc(100vh_-_115px)] overflow-y-auto  min-w-[350px] w-[350px] flex flex-col scrollbar custom-scrollbar dark:text-carbon-dark'>
-      <div className=' p-5 rounded-xl max-xl:p-0 bg-white dark:bg-dark-gray'>
+    <div
+      id='setting'
+      className='rounded-2xl max-xl:pb-36 max-xl:hidden h-[calc(100vh_-_115px)] overflow-y-auto  min-w-[350px] w-[350px] flex flex-col scrollbar custom-scrollbar dark:text-carbon-dark'
+    >
+      <div className='p-5 rounded-xl max-xl:p-0 bg-white dark:bg-dark-gray'>
         <div className='font-medium text-center text-2xl '>সেটিংস</div>
         <div className='xl-max:mt-6'>
           <div className=''>

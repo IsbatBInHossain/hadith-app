@@ -1,6 +1,7 @@
 'use client'
 
 import { StateContext, ThemeContext } from '@/context'
+import { SettingContext } from '@/context/SettingContext'
 import { StateType, ThemeType } from '@/types'
 import { useState } from 'react'
 
@@ -12,11 +13,14 @@ export const initialState: StateType = {
 const AppContext = ({ children }: { children: React.ReactNode }) => {
   const [state, setState] = useState(initialState)
   const [theme, setTheme] = useState<ThemeType>('light')
+  const [settingOpen, setSettingOpen] = useState(false)
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <StateContext.Provider value={{ state, setState }}>
-        {children}
+        <SettingContext.Provider value={{ settingOpen, setSettingOpen }}>
+          {children}
+        </SettingContext.Provider>
       </StateContext.Provider>
     </ThemeContext.Provider>
   )
