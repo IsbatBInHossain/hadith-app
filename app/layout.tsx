@@ -15,8 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <AppContext>
-      <html lang='bn'>
-        <body className='font-kalpurush bg-white'>{children}</body>
+      <html>
+        <body className='font-kalpurush bg-white dark:bg-dark-gray'>
+          {children}
+        </body>
       </html>
     </AppContext>
   )

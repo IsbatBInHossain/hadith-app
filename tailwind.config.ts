@@ -7,15 +7,18 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'selector',
   theme: {
     extend: {
       colors: {
         primary: '#2b9e76',
-        accent: '#ebfcf6',
-        porcelain: '#eceef0',
-        carbon: '#5c5c5c',
-        'hadith-bg': '#f2f4f6',
-        'hadith-bg-lite': '#fafbfb',
+        accent: { DEFAULT: '#ebfcf6', dark: '#646464' },
+        porcelain: { DEFAULT: '#eceef0', dark: '#383838' },
+        'dark-gray': '#202020',
+        'dark-border': '#303030',
+        carbon: { DEFAULT: '#5c5c5c', dark: '#a6a6a6' },
+        'hadith-bg': { DEFAULT: '#f2f4f6', dark: '#101010' },
+        'hadith-bg-lite': { DEFAULT: '#fafbfb', dark: '#2c2c2c' },
       },
       fontFamily: {
         kalpurush: ['Kalpurush', ...defaultTheme.fontFamily.sans],

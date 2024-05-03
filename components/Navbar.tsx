@@ -5,7 +5,7 @@ import Searchbar from './Searchbar'
 
 const Navbar = () => {
   return (
-    <nav className='fixed z-10 top-0 left-0 right-0 flex items-center justify-between w-full max-md:h-16 h-20 px-4 bg-white'>
+    <nav className='fixed z-10 top-0 left-0 right-0 flex items-center justify-between w-full max-md:h-16 h-20 px-4 bg-white dark:bg-dark-gray'>
       <div className=' flex items-center cursor-pointer'>
         <div className='w-11 md:w-fit'>
           <Image
@@ -17,8 +17,12 @@ const Navbar = () => {
           />
         </div>
         <div className='ml-6 block max-md:hidden'>
-          <h3 className='text-xl font-bold'>হাদিস সমূহ</h3>
-          <h6 className='text-sm text-[#404040]'>হাদিস পড়ুন শিখুন এবং জানুন</h6>
+          <h3 className='text-xl font-bold dark:text-carbon-dark'>
+            হাদিস সমূহ
+          </h3>
+          <h6 className='text-sm text-[#404040] dark:text-carbon-dark'>
+            হাদিস পড়ুন শিখুন এবং জানুন
+          </h6>
         </div>
         <div className='ml-4 hidden max-sm:ml-3 max-md:block'>
           <h1 className='text-[28px] leading-7 text-primary max-xs:hidden max-sm:text-xl'>

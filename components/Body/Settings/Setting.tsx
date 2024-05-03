@@ -1,13 +1,16 @@
 'use client'
 
-import { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useContext, useEffect, useState } from 'react'
 import { BiDownArrow } from 'react-icons/bi'
 import SupportUs from './SupportUs'
+import { ThemeContext } from '@/context'
+import { toggleTheme } from '@/lib/utils'
 
 const Setting = () => {
   const [translateFontRange, setTranslateFontRange] = useState('17')
   const [arabicFontRange, setArabicFontRange] = useState('23')
   const [isOpen, setIsOpen] = useState(false)
+  const theme = useContext(ThemeContext)
 
   const handleTranslateFontChange = (e: ChangeEvent<HTMLInputElement>) => {
     setTranslateFontRange(e.target.value)
@@ -27,9 +30,19 @@ const Setting = () => {
     setIsOpen(!isOpen)
   }
 
+  const handleThemeChange = () => {
+    if (theme?.theme === 'light') {
+      theme.setTheme('dark')
+      toggleTheme('dark')
+    } else if (theme?.theme == 'dark') {
+      theme?.setTheme('light')
+      toggleTheme('light')
+    }
+  }
+
   return (
     <div
-      className=' rounded-2xl max-xl:pb-36 max-xl:hidden h-[calc(100vh_-_115px)] overflow-y-auto bg-white min-w-[350px] w-[350px] flex flex-col'
+      className=' rounded-2xl max-xl:pb-36 max-xl:hidden h-[calc(100vh_-_115px)] overflow-y-auto bg-white dark:bg-dark-gray min-w-[350px] w-[350px] flex flex-col'
       style={{ scrollbarWidth: 'thin' }}
     >
       <div className=' p-5 rounded-xl max-xl:p-0'>
@@ -53,7 +66,7 @@ const Setting = () => {
               </div>
               <div
                 id='fontDropdown'
-                className='absolute  bg-white rounded-lg right-0 left-0 top-14 px-0 pt-3 shadow-2xl z-10'
+                className='absolute hidden bg-white rounded-lg right-0 left-0 top-14 px-0 pt-3 shadow-2xl z-10'
               >
                 <div className='cursor-pointer text-[15px] flex flex-col px-2 pb-2'>
                   <div className='hover:bg-[#f8f8f9] px-4 py-2 rounded-md'>
@@ -89,7 +102,7 @@ const Setting = () => {
                 min='18'
                 max='40'
                 value={arabicFontRange}
-                style={{ backgroundSize: '22.7273% 100%;' }}
+                style={{ backgroundSize: '22.7273% 100%' }}
                 onChange={e => handleArabicFontChange(e)}
                 name='translation'
               />
@@ -108,7 +121,7 @@ const Setting = () => {
                 min='14'
                 max='25'
                 value={translateFontRange}
-                style={{ backgroundSize: '22.7273% 100%;' }}
+                style={{ backgroundSize: '22.7273% 100%' }}
                 onChange={e => handleTranslateFontChange(e)}
               />
               <div className=''>
@@ -117,23 +130,18 @@ const Setting = () => {
             </div>
           </div>
           <div className='rounded-lg'>
-            <div className='mt-6 setting-accordion-content'>
+            <div className='mt-6'>
               <div className='flex justify-between items-center'>
-                <div className='text-md style-Kalpurush dark:text-dark-text'>
-                  নাইট মোড
-                </div>
+                <div className='text-md'>নাইট মোড</div>
                 <div>
                   <button
-                    className='bg-[#ECEEF0] dark:bg-dark-polygon relative inline-flex h-5 w-10 items-center rounded-full'
-                    id='headlessui-switch-:r0:'
-                    role='switch'
+                    className='bg-[#ECEEF0] relative inline-flex h-5 w-10 items-center rounded-full'
                     type='button'
-                    aria-checked='false'
-                    data-headlessui-state=''
+                    onClick={handleThemeChange}
                   >
                     <span
                       aria-hidden='true'
-                      className='translate-x-[3px] bg-white dark:bg-hadith-dark-card
+                      className='translate-x-[3px] dark:translate-x-[21px] bg-white
             pointer-events-none inline-block h-[16px] w-[16px] transform rounded-full  shadow-lg ring-0 transition duration-200 ease-in-out'
                     ></span>
                   </button>

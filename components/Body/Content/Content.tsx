@@ -13,7 +13,7 @@ const Content = () => {
     >
       <ContentHeader />
 
-      <div className=' rounded-2xl bg-white p-4 max-lg:flex hidden items-center gap-4 w-full'>
+      <div className=' rounded-2xl bg-white dark:bg-dark-gray p-4 max-lg:flex hidden items-center gap-4 w-full'>
         <IoMenuOutline className=' w-6 h-6' />
         <h3 className=''>{chapters[0].book_name.toLocaleUpperCase('bn-BN')}</h3>
       </div>

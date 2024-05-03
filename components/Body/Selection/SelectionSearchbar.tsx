@@ -13,10 +13,10 @@ const SelectionSearchbar = () => {
 
   return (
     <div className='relative my-3 px-4 w-full'>
-      <IoSearchOutline className=' absolute inset-y-[22px] left-7 font-sans text-[#5C5C5C] w-[18px] h-[18px]' />
+      <IoSearchOutline className=' absolute inset-y-[22px] left-7 font-sans text-[#5C5C5C] dark:text-white w-[18px] h-[18px]' />
       <input
         placeholder='Search For Filter'
-        className={`mt-2 bg-hadith-bg w-full ${roboto.className} p-3 rounded-lg focus:outline-0 focus:text-black pl-10 pr-10`}
+        className={`mt-2 bg-hadith-bg dark:bg-hadith-bg-lite-dark w-full ${roboto.className} p-3 rounded-lg focus:outline-0 focus:text-black pl-10 pr-10`}
         type='text'
         value={searchTerm}
         onChange={e => handleChange(e)}

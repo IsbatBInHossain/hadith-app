@@ -1,7 +1,8 @@
+import { ThemeType } from '@/types'
 import { Dispatch, SetStateAction, createContext } from 'react'
 
 interface ThemeContextType {
-  theme: string
+  theme: ThemeType
   setTheme: Dispatch<SetStateAction<string>>
 }
 

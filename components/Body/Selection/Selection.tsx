@@ -10,14 +10,14 @@ const Selection = () => {
   }
 
   return (
-    <div className=' max-lg:hidden rounded-2xl h-[calc(100vh_-_115px)] bg-white min-w-[350px] w-[350px] flex items-center flex-col'>
-      <div className='border-b-[1px] w-full flex items-center justify-center text-lg text-white border-porcelain '>
+    <div className=' max-lg:hidden rounded-2xl h-[calc(100vh_-_115px)] bg-white dark:bg-dark-gray min-w-[350px] w-[350px] flex items-center flex-col'>
+      <div className='border-b-[1px] w-full flex items-center justify-center text-lg text-white border-porcelain dark:border-porcelain-dark'>
         <p
           onClick={e => handleClick(e)}
           className={`${
             selector == 'books'
               ? 'bg-primary text-white'
-              : 'bg-white text-black'
+              : 'bg-white dark:bg-dark-gray text-black'
           } w-1/2 text-center py-3 cursor-pointer rounded-tl-2xl text-xl`}
           id='books'
         >
@@ -28,7 +28,7 @@ const Selection = () => {
           className={`${
             selector == 'chapters'
               ? 'bg-primary text-white'
-              : 'bg-white text-black'
+              : 'bg-white dark:bg-dark-gray text-black'
           } text-xl w-1/2 text-center  py-3 cursor-pointer rounded-tr-xl`}
           id='chapters'
         >

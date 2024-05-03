@@ -43,3 +43,5 @@ export type StateType = {
   book: string
   chapter: number
 }
+
+export type ThemeType = 'light' | 'dark' | 'system'

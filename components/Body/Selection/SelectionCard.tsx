@@ -14,14 +14,14 @@ const SelectionCard = ({ title, code, number, selector }: Props) => {
   }
 
   return (
-    <div className=' p-4 flex  group cursor-pointer  false bg-white group hover:bg-accent justify-between items-center rounded-2xl h-[6.25rem]'>
+    <div className=' p-4 flex  group cursor-pointer  false bg-white dark:bg-dark-gray group dark:hover:bg-hadith-bg-lite-dark hover:bg-accent justify-between items-center rounded-2xl h-[6.25rem]'>
       <div className=' flex items-center gap-4'>
         <div className='h-12 w-12 max-xl:w-10 max-xl:h-10  flex items-center justify-center relative'>
           <h3 className='text-gray-400 group-hover:text-white absolute font-medium font-sans group-hover:opacity-100'>
             {code}
           </h3>
           <svg
-            className='fill-[#f1f5f4] group-hover:fill-primary false    '
+            className='fill-[#f1f5f4] dark:fill-hadith-bg-lite-dark group-hover:fill-primary false    '
             width='56'
             height='62'
             viewBox='0 0 56 62'
@@ -35,10 +35,10 @@ const SelectionCard = ({ title, code, number, selector }: Props) => {
           </svg>
         </div>
         <div className='flex flex-col justify-between gap-1.5 group'>
-          <h4 className='text-base font-medium leading-7 text-[15px] text-black md:text-base xl:text-base'>
+          <h4 className='text-base font-medium leading-7 text-[15px] text-black dark:text-carbon-dark md:text-base dark:group-hover:text-primary xl:text-base'>
             {title}
           </h4>
-          <p className='text-[#40404099] text-sm leading-[26px] md:text-[13px]'>
+          <p className='text-[#40404099] dark:text-accent-dark text-sm leading-[26px] md:text-[13px]'>
             {selector === 'books' ? 'সর্বমোট হাদিস - ' : 'হাদিসের রেঞ্জ: '}
             <span>{selector === 'books' ? formattedNumber : number}</span>
           </p>
