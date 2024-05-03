@@ -29,3 +29,12 @@ export interface ChapterProps {
   sort_order: number
   hadith: HadithProps[]
 }
+
+export interface BookType {
+  id: number
+  title: string
+  title_ar: string
+  number_of_hadis: number
+  abvr_code: string
+  book_name: string
+}

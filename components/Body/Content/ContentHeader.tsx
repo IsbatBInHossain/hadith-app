@@ -4,8 +4,8 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 
 const ContentHeader = () => {
   return (
-    <div className='w-full '>
-      <div className=' rounded-t-2xl font-sans text-sm text-[#667085] bg-hadith-bg-lite mb-0.5 p-4 flex items-center'>
+    <div className='w-full max-lg:hidden block'>
+      <div className=' rounded-t-2xl font-sans text-sm text-[#667085] bg-hadith-bg-lite mb-0.5 p-4  flex items-center'>
         <Image
           src='/assets/others/breadcrumb_book.svg'
           alt='book image'

@@ -1,15 +1,20 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import allBooks from '@/public/data/all-books.json'
 import bukhari from '@/public/data/bukhari.json'
 import SelectionCard from './SelectionCard'
+import { BookType } from '@/types'
 
 const Books = ({ selector }: { selector: string }) => {
   const books = allBooks.book
+
   const chapters = bukhari.chap
 
   return (
-    <div className=' flex flex-col gap-2 w-full px-4 overflow-y-auto'>
+    <div
+      className=' flex flex-col gap-2 w-full px-4 overflow-y-auto'
+      style={{ scrollbarWidth: 'thin' }}
+    >
       {selector === 'books'
         ? books.map(book => (
             <SelectionCard

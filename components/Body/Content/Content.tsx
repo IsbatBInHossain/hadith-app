@@ -1,13 +1,22 @@
 import chapterHadith from '@/public/data/bukhari-1.json'
 import ContentHeader from './ContentHeader'
 import ChapterCard from './ChapterCard'
+import { IoMenuOutline } from 'react-icons/io5'
 
 const Content = () => {
   const chapters = chapterHadith.hadith
 
   return (
-    <div className=' h-full w-full mx-6 flex items-center flex-col mt-8 overflow-y-auto'>
+    <div
+      className=' h-full w-full mx-6 flex items-center flex-col mt-8 overflow-y-auto'
+      style={{ scrollbarWidth: 'thin' }}
+    >
       <ContentHeader />
+
+      <div className=' rounded-2xl bg-white p-4 max-lg:flex hidden items-center gap-4 w-full'>
+        <IoMenuOutline className=' w-6 h-6' />
+        <h3 className=''>{chapters[0].book_name.toLocaleUpperCase('bn-BN')}</h3>
+      </div>
       <div className=' rounded-2xl bg-white p-4 flex items-center gap-4 w-full mt-4'>
         <h4 className=' flex items-center justify-center text-white w-[42.34px] h-10 rounded-xl bg-primary font-medium leading-6'>
           ১

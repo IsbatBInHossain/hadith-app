@@ -1,7 +1,7 @@
 import { HadithProps } from '@/types'
 import Image from 'next/image'
 import { IoCopyOutline } from 'react-icons/io5'
-import { HiOutlineBookmark } from 'react-icons/hi2'
+import { MdOutlineBookmarkBorder } from 'react-icons/md'
 import { CiShare2, CiShare1 } from 'react-icons/ci'
 import { PiWarningOctagonLight } from 'react-icons/pi'
 
@@ -40,11 +40,11 @@ const HadithCard = ({ hadith }: { hadith: HadithProps }) => {
           </button>
         </div>
         <div className=' flex items-center gap-10 text-[#868686]'>
-          <IoCopyOutline className=' w-6 h-6' />
-          <HiOutlineBookmark className=' w-6 h-6' />
-          <CiShare2 className=' w-6 h-6' />
-          <PiWarningOctagonLight className=' w-6 h-6' />
-          <CiShare1 className=' w-6 h-6' />
+          <IoCopyOutline className=' w-6 h-6 cursor-pointer' />
+          <MdOutlineBookmarkBorder className=' w-6 h-6 cursor-pointer' />
+          <CiShare2 className=' w-6 h-6 cursor-pointer' />
+          <PiWarningOctagonLight className=' w-6 h-6 cursor-pointer' />
+          <CiShare1 className=' w-6 h-6 cursor-pointer' />
         </div>
       </div>
     </div>
