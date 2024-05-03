@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import AppContext from '@/components/AppContext'
 
 export const metadata: Metadata = {
   title: 'ওহীর সূচনা অধ্যায় - সহিহ বুখারী | iHadis.com',
@@ -13,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='bn'>
-      <body className='font-kalpurush bg-white'>{children}</body>
-    </html>
+    <AppContext>
+      <html lang='bn'>
+        <body className='font-kalpurush bg-white'>{children}</body>
+      </html>
+    </AppContext>
   )
 }

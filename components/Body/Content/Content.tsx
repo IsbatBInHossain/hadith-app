@@ -24,7 +24,7 @@ const Content = () => {
         <p className=' text-xl leading-7 text-slate-600'>ওহীর সূচনা অধ্যায়</p>
       </div>
       {chapters.map(chapter => (
-        <ChapterCard key={chapter.chapter_id} chapter={chapter} />
+        <ChapterCard key={chapter.id} chapter={chapter} />
       ))}
     </div>
   )

@@ -38,3 +38,8 @@ export interface BookType {
   abvr_code: string
   book_name: string
 }
+
+export type StateType = {
+  book: string
+  chapter: number
+}
